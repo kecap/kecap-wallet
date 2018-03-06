@@ -1,0 +1,16 @@
+my-menu {
+  .ui-button {
+    padding: 16px;
+    height: auto;
+
+    .ui-layout {
+      * {
+        line-height: 36px;
+      }
+
+      span {
+        text-align: left;
+      }
+    }
+  }
+}

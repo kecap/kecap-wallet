@@ -1,0 +1,33 @@
+<header class="ui-header">
+    <div class="ui-header__row">
+        <button class="ui-button ui-button--icon" (click)="__global.history.back()">
+            <i class="material-icons">arrow_back</i>
+          </button>
+        <span class="ui-header__title">[[title]]</span>
+      </div>
+  </header>
+  <div class="ui-scroll">
+      <div class="ui-list">
+          <!-- <xin-for items="[[lists]]" as="list"> -->
+            <!-- <template> -->
+              <div class="ui-layout">
+                <div class="ui-flex">
+                  <div style="font-style:italic; font-weight: bold">Setoran simpanan pokok</div>
+                  <div style="font-style:italic;">
+                    Koperasi Batu
+
+                  </div>
+                </div>
+                <div class="ui-flex" style="text-align: right;">
+                  <div class="" (click)="edit(list)">125000</div>
+                  <div style="font-size: 10px">
+                      <i class="material-icons"  style="font-size: 10px">alarm</i>
+                      23 Okt 2017
+                  </div>
+                </div>
+              </div>
+            <!-- </template> -->
+          <!-- </xin-for> -->
+        </div>
+  </div>
+

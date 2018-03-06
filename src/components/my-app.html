@@ -1,0 +1,38 @@
+<xin-lazy-view-middleware></xin-lazy-view-middleware>
+<xin-title-middleware></xin-title-middleware>
+
+<ui-drawer id="drawer">
+  <a href="#!/profile">
+    <div class="mini-profile">
+      <div class="mini-profile__image">
+        <img src="../assets/images/profile/200x200jordan.png">
+      </div>
+      <div class="mini-profile__info">
+        <h3>Michael Jordan</h3>
+        <p>Member</p>
+      </div>
+    </div>
+  </a>
+  <div class="ui-list" id="menuList">
+    <a class="ui-list__item" href="#!/">Home</a>
+    <a class="ui-list__item" href="#!/profile">Koperasi</a>
+    <a class="ui-list__item" href="#!/payment">Payment</a>
+    <a class="ui-list__item" href="#!/login">Jurnal</a>
+    <a class="ui-list__item" href="#!/walkthrough">Settings</a>
+  </div>
+</ui-drawer>
+
+<xin-pager class="ui-layout ui-layout--v">
+  <my-walkthrough lazy-view uri="/walkthrough"></my-walkthrough>
+  <my-login lazy-view uri="/login"></my-login>
+  <my-register lazy-view uri="/register"></my-register>
+  <my-home lazy-view uri="/"></my-home>
+  <my-history lazy-view uri="/history"></my-history>
+  <my-form-coop lazy-view uri="/formCoop[/{id}]"></my-form-coop>
+  <my-list-coop lazy-view uri="/listCoop"></my-list-coop>
+  <my-payment lazy-view uri="/payment"></my-payment>
+  <my-receipt lazy-view uri="/receipt"></my-receipt>
+  <my-expense lazy-view uri="/expense"></my-expense>
+  <my-layouts lazy-view uri="/layouts"></my-layouts>
+  <my-profile lazy-view uri="/profile"></my-profile>
+</xin-pager>

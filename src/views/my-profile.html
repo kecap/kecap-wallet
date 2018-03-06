@@ -1,0 +1,20 @@
+<div class="ui-layout ui-layout--v">
+  <header class="ui-header">
+    <div class="ui-header__row">
+      <button class="ui-button ui-button--icon ui-drawer--handle" (click)="__global.drawer.open()">
+        <i class="material-icons">menu</i>
+      </button>
+      <span class="ui-header__title">[[title]]</span>
+    </div>
+  </header>
+
+  <form class="profile ui-padding" (submit)="doSave(evt)">
+    <div class="profile__image">
+      <img src="[[ profile.image ]]">
+    </div>
+
+    <ui-textfield label="Name" value="{{ profile.name }}"></ui-textfield>
+    <ui-textfield label="Birth date" type="date" value="{{ profile.birthdate }}"></ui-textfield>
+    <input type="submit" class="ui-button ui-button--block ui-button--colored" value="Save">
+  </form>
+</div>

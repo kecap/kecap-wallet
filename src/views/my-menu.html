@@ -1,0 +1,21 @@
+<header class="ui-header">
+  <div class="ui-header__row">
+    <button class="ui-button ui-button--icon ui-drawer--handle" (click)="__global.drawer.open()">
+      <i class="material-icons">menu</i>
+    </button>
+    <span class="ui-header__title">[[title]]</span>
+  </div>
+</header>
+
+<div>
+  <xin-for items="[[menus]]" as="menu">
+    <template>
+      <button class="ui-button ui-button--block" (click)="__app.navigate(menu.uri)">
+        <div class="ui-layout ui-layout--h">
+          <span class="ui-flex">[[menu.label]]</span>
+          <i class="material-icons">arrow_forward</i>
+        </div>
+      </button>
+    </template>
+  </xin-for>
+</div>

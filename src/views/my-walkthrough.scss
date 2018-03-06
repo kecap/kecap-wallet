@@ -1,0 +1,42 @@
+my-walkthrough {
+  .swiper-slide {
+    height: 100%;
+    weight: 100%;
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #fff;
+
+      * {
+        box-sizing: border-box;
+      }
+    }
+
+
+    .swiper-pagination-bullet-active {
+      background: #fff!important;
+    }
+  }
+
+  .slide-1,
+  .slide-3 {
+    background-color: #00e9d5;
+  }
+
+  .slide-2,
+  .slide-4 {
+    background-color: #ae75e7;
+  }
+}

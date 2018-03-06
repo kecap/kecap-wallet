@@ -1,0 +1,141 @@
+<div class="ui-layout ui-layout--v">
+  <header class="ui-header">
+    <div class="ui-header__row">
+      <button class="ui-button ui-button--icon ui-drawer--handle" (click)="__global.drawer.open()">
+        <i class="material-icons">menu</i>
+      </button>
+      <span class="ui-header__title">[[title]]</span>
+      <button class="ui-button ui-button--icon ui-drawer--handle" (click)="$.modalMenu.open()">
+          <i class="material-icons">apps</i>
+        </button>
+    </div>
+  </header>
+
+  <div class="ui-scroll">
+    <ui-modal id="modalMenu">
+      <div class="ui-padding">
+          <div class="ui-layout">
+            <div class="ui-flex" style="text-align: center;">
+              <button (click)="formCoop(evt)">
+                <i class="material-icons" style="font-size:68px">group</i>
+              </button>
+              <div>
+                Tambah Koperasi
+              </div>
+            </div>
+            <div class="ui-flex" style="text-align: center;">
+              <button (click)="history()">
+                <i class="material-icons" style="font-size:68px">history</i>
+              </button>
+              <div>
+                Aktifitas
+              </div>
+            </div>
+          </div>
+        </div>
+    </ui-modal>
+    <br>
+    <table>
+      <thead>
+        <th colspan="3">
+          Simpanan
+        </th>
+      </thead>
+      <thead>
+        <th>
+          Nama Koperasi
+        </th>
+        <th>
+          Simpanan Pokok
+        </th>
+        <th>
+          Simpanan Wajib
+        </th>
+      </thead>
+      <tbody>
+        <xin-for items="[[savings]]" as="saving">
+          <template>
+                <tr>
+                  <td>[[saving.coopName]]</td>
+                  <td>[[saving.simpananPokok]]</td>
+                  <td>[[saving.simpananWajib]]</td>
+                </tr>
+            </template>
+          </xin-for>
+      </tbody>
+    </table>
+    <br>
+    <table>
+      <thead>
+        <th colspan="3">
+          Pinjaman
+        </th>
+      </thead>
+      <thead>
+        <th>
+          Nama Koperasi
+        </th>
+        <th>
+          Pinjaman
+        </th>
+        <th>
+          Saldo
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Koperasi Batu Gunting</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+        <tr>
+          <td>Koperasi Suara</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+        <tr>
+          <td>Koperasi Payung</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+      </tbody>
+    </table>
+<br>
+    <table>
+      <thead>
+        <th colspan="3">
+          Tabungan
+        </th>
+      </thead>
+      <thead>
+        <th>
+          Nama Koperasi
+        </th>
+        <th>
+          Tabungan
+        </th>
+        <th>
+          Saldo
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Koperasi Batu Gunting</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+        <tr>
+          <td>Koperasi Suara</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+        <tr>
+          <td>Koperasi Payung</td>
+          <td>23000</td>
+          <td>23000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="ui-layout ui-layout--v">
+  <header class="ui-header">
+    <div class="ui-header__row">
+      <button class="ui-button ui-button--icon ui-drawer--handle" (click)="__global.drawer.open()">
+        <i class="material-icons">menu</i>
+      </button>
+      <span class="ui-header__title">[[title]]</span>
+      <button class="ui-button ui-button--icon ui-drawer--handle" (click)="$.modalMenu.open()">
+          <i class="material-icons">apps</i>
+        </button>
+    </div>
+  </header>
+
+  <canvas id="canvas" hidden></canvas>
+</div>

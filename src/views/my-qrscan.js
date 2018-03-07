@@ -1,5 +1,5 @@
 import { define } from '@xinix/xin';
-import { View } from '@xinix/xin/views';
+import { View } from '@xinix/xin/components/view';
 
 import html from './my-qrscan.html';
 import './my-qrscan.scss';
@@ -13,10 +13,6 @@ const fetchService = window.fetchService;
 export class MyQrScan extends View {
   get props () {
     return Object.assign({}, super.props, {
-      savings: {
-        type: Array,
-        value: () => ([]),
-      },
       qrData: {
         type: String,
       },
@@ -29,11 +25,22 @@ export class MyQrScan extends View {
 
   focused () {
     super.focused();
+
+    this.$.scanner.start();
+  }
+
+  blurred () {
+    super.blurred();
+
+    console.log('blurred');
+
+    this.$.scanner.stop();
   }
 
   async handler (evt) {
     let results = await fetchService.post('api/billing', { data: this.qrData });
     console.log(results);
+    this.$.scanner.stop();
   }
 
 }

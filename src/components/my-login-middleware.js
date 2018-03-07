@@ -14,20 +14,20 @@ export class Login extends Middleware {
 
   callback (options) {
     return async (ctx, next) => {
-      let token = jwt.decode(window.localStorage.token);
-      let uri = ['/login', '/register'];
-      if (!uri.includes(ctx.uri) && token == null) {
-        ctx.app.navigate('/login');
-        return;
-      }
-      if (token) {
-        window.sessionUsername = token.username;
-      }
-      // if (uri.includes(ctx.uri)) {
-      //   ctx.app.$$('ui-drawer').style.display = 'none';
-      // } else {
-      //   ctx.app.$$('ui-drawer').style.display = '';
+      // let token = jwt.decode(window.localStorage.token);
+      // let uri = ['/login', '/register'];
+      // if (!uri.includes(ctx.uri) && token == null) {
+      //   ctx.app.navigate('/login');
+      //   return;
       // }
+      // if (token) {
+      //   window.sessionUsername = token.username;
+      // }
+      // // if (uri.includes(ctx.uri)) {
+      // //   ctx.app.$$('ui-drawer').style.display = 'none';
+      // // } else {
+      // //   ctx.app.$$('ui-drawer').style.display = '';
+      // // }
 
       await next();
     };

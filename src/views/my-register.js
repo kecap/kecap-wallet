@@ -1,5 +1,5 @@
 import { define } from '@xinix/xin';
-import { View } from '@xinix/xin/views';
+import { View } from '@xinix/xin/components/view';
 
 import html from './my-register.html';
 import { UILoading } from 'xin-ui/ui-loading';

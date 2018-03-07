@@ -8,6 +8,10 @@
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kecap/kecap-wallet.git"
+  },
   "author": "Ganesha <reekoheek@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -38,6 +42,7 @@
   "dependencies": {
     "@webcomponents/custom-elements": "^1.0.8",
     "@xinix/xin": "^2.4.9",
+    "jsonwebtoken": "^8.2.0",
     "npm": "^5.7.1",
     "qrcode": "^1.2.0",
     "whatwg-fetch": "^2.0.3",

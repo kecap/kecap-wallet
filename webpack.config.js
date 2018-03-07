@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const WebpackMonitor = require('webpack-monitor');
 
 module.exports = function (env = {}) {
   return {
@@ -66,12 +65,6 @@ module.exports = function (env = {}) {
       new CopyWebpackPlugin([
         { from: 'assets', to: 'assets' },
       ]),
-      // new WebpackMonitor({
-      //   capture: true, // -> default 'true'
-      //   // target: '../monitor/myStatsStore.json', // default -> '../monitor/stats.json'
-      //   launch: true, // -> default 'false'
-      //   port: 3030, // default -> 8081
-      // }),
     ],
     devServer: {
       compress: true,
@@ -104,14 +97,10 @@ function getBabelLoader () {
   let plugins = [
     'syntax-dynamic-import',
     // require.resolve('babel-plugin-transform-async-to-generator'),
-    // [ require.resolve('babel-plugin-__coverage__'), { 'ignore': 'node_modules' } ],
-    // require.resolve('babel-plugin-syntax-dynamic-import'),
-    // require.resolve('babel-plugin-istanbul')
   ];
 
   let presets = [
-    // require.resolve('babel-preset-es2015'),
-    // require.resolve('babel-preset-stage-3'),
+    // [ 'env' ],
   ];
 
   return {

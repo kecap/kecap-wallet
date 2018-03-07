@@ -1,7 +1,7 @@
 {
-  "name": "xin-example",
+  "name": "kecap-wallet",
   "version": "1.0.0",
-  "description": "Xin Example",
+  "description": "Kecap wallet is implementation of electronic wallet",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server",

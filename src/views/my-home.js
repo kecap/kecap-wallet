@@ -6,21 +6,14 @@ import './my-home.scss';
 
 import('xin-ui/ui-modal');
 import('xin-ui/ui-slides');
+import('xin-ui/ui-textfield');
 
 export class MyHome extends View {
   get props () {
     return Object.assign({}, super.props, {
-      title: {
-        type: String,
-        value: 'Home',
-      },
-      logo: {
-        type: String,
-        value: 'http://koperasi.png',
-      },
-      savings: {
-        type: Array,
-        value: () => ([]),
+      billing: {
+        type: Object,
+        value: () => ({ amount: 0 }),
       },
     });
   }
@@ -29,27 +22,23 @@ export class MyHome extends View {
     return html;
   }
 
-  focused () {
-    let savings = [{
-      coopName: 'Koperasi Payung Bersama',
-      simpananPokok: '12900',
-      simpananWajib: '23000',
-    }];
-    this.set('savings', savings);
-  }
+  doCreateBilling (evt) {
+    if (evt) {
+      evt.preventDefault();
+    }
 
-  doLogin (evt) {
-    evt.preventDefault();
+    let { beneficiary, amount } = this.billing;
+    amount = Number(amount);
+    if (!amount) {
+      return;
+    }
 
-    this.__app.navigate('/');
-  }
+    if (!beneficiary) {
+      beneficiary = this.__app.accounts[0];
+    }
 
-  formCoop () {
-    this.__app.navigate('/formCoop');
-  }
-
-  history () {
-    this.__app.navigate('/history');
+    this.__app.set('__qrbilling', { beneficiary, amount });
+    this.__app.navigate('/qrbilling');
   }
 }
 define('my-home', MyHome);

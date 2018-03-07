@@ -19,10 +19,7 @@
   </a>
   <div class="ui-list" id="menuList">
     <a class="ui-list__item" href="#!/">Home</a>
-    <a class="ui-list__item" href="#!/profile">Koperasi</a>
-    <a class="ui-list__item" href="#!/payment">Payment</a>
-    <a class="ui-list__item" href="#!/login">Jurnal</a>
-    <a class="ui-list__item" href="#!/walkthrough">Settings</a>
+    <a class="ui-list__item" href="#!/profile">Profile</a>
   </div>
 </ui-drawer>
 
@@ -34,9 +31,8 @@
   <my-history lazy-view uri="/history"></my-history>
   <my-form-coop lazy-view uri="/formCoop[/{id}]"></my-form-coop>
   <my-list-coop lazy-view uri="/listCoop"></my-list-coop>
-  <my-payment lazy-view uri="/payment"></my-payment>
-  <my-receipt lazy-view uri="/receipt"></my-receipt>
-  <my-expense lazy-view uri="/expense"></my-expense>
+  <my-qrbilling lazy-view uri="/qrbilling[/{account}/{amount}]"></my-qrbilling>
+  <my-qrscan lazy-view uri="/qrscan"></my-qrscan>
   <my-layouts lazy-view uri="/layouts"></my-layouts>
   <my-profile lazy-view uri="/profile"></my-profile>
 </xin-pager>

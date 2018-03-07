@@ -6,6 +6,7 @@ const WebpackMonitor = require('webpack-monitor');
 
 module.exports = function (env = {}) {
   return {
+    mode: 'development',
     context: path.resolve(__dirname, './src'),
     entry: {
       index: './index.js',

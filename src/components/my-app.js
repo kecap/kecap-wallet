@@ -17,29 +17,13 @@ export class MyApp extends App {
 
   get props () {
     return Object.assign({}, super.props, {
-      formMenus: {
+      accounts: {
         type: Array,
-        value: () => {
-          return [
-            { label: 'Example', uri: '/form-example' },
-          ];
-        },
+        value: () => (['1234567890']),
       },
       configUrl: {
         type: String,
         value: 'https://192.168.3.104:8443',
-      },
-      layoutMenus: {
-        type: Array,
-        value: () => {
-          return [
-            { label: 'Big List', uri: '/big-list' },
-            { label: 'Mini List', uri: '/mini-list' },
-            { label: 'Notifications', uri: '/notifications' },
-            { label: 'Profile', uri: '/profile' },
-            { label: 'Schedule', uri: '/schedule' },
-          ];
-        },
       },
     });
   }

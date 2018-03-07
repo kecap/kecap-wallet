@@ -1,25 +1,18 @@
 import { define } from '@xinix/xin';
 import { View } from '@xinix/xin/views';
 
-import html from './my-expense.html';
-import './my-expense.scss';
+import html from './my-qrscan.html';
+import './my-qrscan.scss';
 import 'xin-qr-scanner';
 
 import('xin-ui/ui-modal');
 import('xin-ui/ui-slides');
 
-let fetchService = window.fetchService;
-export class MyExpense extends View {
+const fetchService = window.fetchService;
+
+export class MyQrScan extends View {
   get props () {
     return Object.assign({}, super.props, {
-      title: {
-        type: String,
-        value: 'Home',
-      },
-      logo: {
-        type: String,
-        value: 'http://koperasi.png',
-      },
       savings: {
         type: Array,
         value: () => ([]),
@@ -44,4 +37,4 @@ export class MyExpense extends View {
   }
 
 }
-define('my-expense', MyExpense);
+define('my-qrscan', MyQrScan);

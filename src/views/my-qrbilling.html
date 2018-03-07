@@ -1,0 +1,23 @@
+<div class="ui-layout ui-layout--v">
+  <header class="ui-header">
+    <div class="ui-header__row">
+      <button class="ui-button ui-button--icon" (click)="__global.history.back()">
+        <i class="material-icons">arrow_back</i>
+      </button>
+      <span class="ui-header__title">QR Billing</span>
+    </div>
+  </header>
+
+  <div>
+    <my-qrcode data="[[billing]]"></my-qrcode>
+    <hr>
+    <div>
+      <label>Beneficiary</label>
+      <div>[[billing.beneficiary]]</div>
+    </div>
+    <div>
+      <label>Amount</label>
+      <div>[[billing.amount]]</div>
+    </div>
+  </div>
+</div>

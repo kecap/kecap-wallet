@@ -1,5 +1,9 @@
+<my-login-middleware/>
 <xin-lazy-view-middleware></xin-lazy-view-middleware>
 <xin-title-middleware></xin-title-middleware>
+
+<connect-pool id="apiPool" base-url="[[configUrl]]"></connect-pool>
+<my-fetch-service id="fetchService"></my-fetch-service>
 
 <ui-drawer id="drawer">
   <a href="#!/profile">

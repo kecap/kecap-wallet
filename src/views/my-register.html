@@ -9,6 +9,7 @@
 
 <form class="ui-padding" (submit)="doRegister(evt)">
   <ui-textfield label="Email" value="{{email}}"></ui-textfield>
+  <ui-textfield label="Username" value="{{username}}"></ui-textfield>
   <ui-textfield label="Full name" value="{{fullname}}"></ui-textfield>
 
   <ui-reveal>
@@ -17,13 +18,3 @@
 
   <button class="ui-button ui-button--block ui-button--colored">Register</button>
 </form>
-
-
-<hr>
-
-<div class="ui-padding" style="text-align: center">
-  <button class="ui-button ui-button--block ui-button--colored">Facebook</button>
-  <br>
-  <br>
-  <button class="ui-button ui-button--block ui-button--raised">Google</button>
-</div>
